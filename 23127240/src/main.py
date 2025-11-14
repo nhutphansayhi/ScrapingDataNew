@@ -1,29 +1,15 @@
-"""
-Main arXiv scraper script
-Student ID: 23127240
-"""
-
 import os
 import sys
 import time
 import json
-import argparse
 import logging
-import shutil
 import psutil
 import csv
 from pathlib import Path
 
-from config import (
-    STUDENT_ID, START_YEAR_MONTH, START_ID,
-    END_YEAR_MONTH, END_ID, DATA_DIR, LOGS_DIR
-)
-from utils import (
-    setup_logging, format_arxiv_id, format_folder_name,
-    ensure_dir, get_directory_size
-)
+from config import *
+from utils import *
 from arxiv_scraper import ArxivScraper
-from reference_scraper import ReferenceScraper
 from reference_scraper_optimized import OptimizedReferenceScraper
 from bibtex_generator import BibtexGenerator
 
@@ -32,20 +18,12 @@ logger = logging.getLogger(__name__)
 
 class ArxivScraperPipeline:
     
-    def __init__(self, output_dir: str, use_batch: bool = True):
+    def __init__(self, output_dir: str):
         self.output_dir = output_dir
-        self.use_batch = use_batch
         ensure_dir(output_dir)
         
         self.arxiv_scraper = ArxivScraper(output_dir)
-        
-        if use_batch:
-            self.reference_scraper = OptimizedReferenceScraper(batch_size=500)
-            logger.info("Using OPTIMIZED batch reference scraper (up to 500x faster!)")
-        else:
-            self.reference_scraper = ReferenceScraper()
-            logger.info("Using standard reference scraper")
-        
+        self.reference_scraper = OptimizedReferenceScraper(batch_size=500)
         self.bibtex_generator = BibtexGenerator()
         
         self.stats = {
@@ -624,29 +602,17 @@ class ArxivScraperPipeline:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='arXiv Paper Scraper')
-    parser.add_argument('--start-ym', type=str, help='Start year-month (e.g., 2311)')
-    parser.add_argument('--start-id', type=int, help='Start paper ID')
-    parser.add_argument('--end-ym', type=str, help='End year-month (e.g., 2312)')
-    parser.add_argument('--end-id', type=int, help='End paper ID')
-    parser.add_argument('--output', type=str, default=DATA_DIR, help='Output directory')
-    parser.add_argument('--no-batch', action='store_true', help='Disable batch API optimization')
-    
-    args = parser.parse_args()
-    
     setup_logging(LOGS_DIR)
     
-    use_batch = not args.no_batch
-    
-    pipeline = ArxivScraperPipeline(args.output, use_batch=use_batch)
+    pipeline = ArxivScraperPipeline(DATA_DIR)
     pipeline.run(
-        start_ym=args.start_ym,
-        start_id=args.start_id,
-        end_ym=args.end_ym,
-        end_id=args.end_id
+        start_ym=START_YEAR_MONTH,
+        start_id=START_ID,
+        end_ym=END_YEAR_MONTH,
+        end_id=END_ID
     )
     
-    logger.info("\nScraping completed!")
+    print("\nDone!")
 
 
 if __name__ == "__main__":

@@ -1,44 +1,25 @@
-"""
-arXiv paper scraper module
-"""
-
 import os
 import time
 import json
 import logging
 import arxiv
 import requests
-from typing import Dict, List, Optional, Tuple
-from datetime import datetime
 
-from utils import (
-    format_arxiv_id, format_folder_name, extract_tar_gz,
-    process_tex_files, clean_version_folder, ensure_dir, clean_temp_files
-)
-from config import ARXIV_API_DELAY, MAX_RETRIES, RETRY_DELAY
+from utils import *
+from config import *
 
 logger = logging.getLogger(__name__)
 
 
 class ArxivScraper:
-    """Scraper for arXiv papers"""
     
-    def __init__(self, output_dir: str):
-        """
-        Initialize arXiv scraper
-        
-        Args:
-            output_dir: Base directory for output
-        """
+    def __init__(self, output_dir):
         self.output_dir = output_dir
         self.client = arxiv.Client()
         self.stats = {
             'papers_attempted': 0,
             'papers_successful': 0,
-            'papers_failed': 0,
-            'versions_downloaded': 0,
-            'total_download_time': 0.0,
-            'total_processing_time': 0.0
+            'papers_failed': 0
         }
     
     def get_paper_metadata(self, arxiv_id: str) -> Optional[Dict]:
@@ -96,7 +77,7 @@ class ArxivScraper:
         logger.error(f"Failed to get metadata for {arxiv_id} after {MAX_RETRIES} attempts")
         return None
     
-    def download_source(self, arxiv_id: str, version: str, output_dir: str) -> Tuple[bool, Optional[str], Optional[str]]:
+    def download_source(self, arxiv_id, version, output_dir):
         """
         Download source files for a specific version
         
