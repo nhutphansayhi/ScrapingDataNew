@@ -6,7 +6,7 @@ import arxiv
 import requests
 
 from utils import *
-from config import *
+from config_settings import *
 
 logger = logging.getLogger(__name__)
 

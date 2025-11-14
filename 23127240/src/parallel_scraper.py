@@ -6,7 +6,7 @@ import os
 
 from arxiv_scraper import ArxivScraper
 from utils import format_folder_name
-from config import MAX_WORKERS
+from config_settings import MAX_WORKERS
 
 logger = logging.getLogger(__name__)
 

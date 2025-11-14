@@ -7,7 +7,7 @@ import json
 import logging
 from pathlib import Path
 
-from config import DATA_DIR
+from config_settings import DATA_DIR
 from reference_scraper import ReferenceScraper
 from utils import setup_logging
 

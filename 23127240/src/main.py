@@ -7,7 +7,7 @@ import psutil
 import csv
 from pathlib import Path
 
-from config import *
+from config_settings import *
 from utils import *
 from parallel_scraper import ParallelArxivScraper
 from reference_scraper_optimized import OptimizedReferenceScraper

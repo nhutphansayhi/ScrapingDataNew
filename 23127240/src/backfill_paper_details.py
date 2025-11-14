@@ -7,7 +7,7 @@ import json
 import csv
 import time
 from pathlib import Path
-from config import STUDENT_ID, DATA_DIR
+from config_settings import STUDENT_ID, DATA_DIR
 from utils import get_directory_size
 
 def get_all_completed_papers(output_dir):

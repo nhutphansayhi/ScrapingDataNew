@@ -9,7 +9,7 @@ import requests
 from typing import Dict, List, Optional
 from datetime import datetime
 
-from config import (
+from config_settings import (
     SEMANTIC_SCHOLAR_API_BASE,
     SEMANTIC_SCHOLAR_FIELDS,
     SEMANTIC_SCHOLAR_DELAY,
