@@ -1,6 +1,6 @@
 # 🚀 START HERE - arXiv Scraper Project
 
-**Student ID:** 23127371  
+**Student ID:** 23127240  
 **Assignment:** Introduction to Data Science - Milestone 1  
 **Status:** ✅ Complete and Ready to Use
 
@@ -25,7 +25,7 @@ This is a **fully implemented** arXiv paper scraper that meets all assignment re
 
 ### Step 1: Install & Test (5 minutes)
 ```bash
-cd 23127371/src
+cd 23127240/src
 python -m venv venv
 venv\Scripts\activate                    # Windows
 pip install -r requirements.txt
@@ -64,7 +64,7 @@ python main.py
 ## 📁 Project Structure
 
 ```
-23127371/
+23127240/
 │
 ├── 📂 src/                           ← Source code
 │   ├── main.py                       ← Run this for scraping
@@ -86,7 +86,7 @@ python main.py
 │   └── Report.doc                    ← Report template
 │
 └── 📂 Output (created after running)
-    └── 23127371_data/                ← Scraped papers go here
+    └── 23127240_data/                ← Scraped papers go here
 ```
 
 ---
@@ -124,7 +124,7 @@ Entry Discovery → Download Sources → Remove Figures → Extract Metadata →
 After running, you'll have:
 
 ```
-23127371_data/
+23127240_data/
 ├── 2208-11941/
 │   ├── tex/
 │   │   ├── v1/              ← TeX files (figures removed)
@@ -164,7 +164,7 @@ After running, you'll have:
 - [ ] `Report.doc` completed with all statistics filled
 - [ ] YouTube video link in Report.doc
 - [ ] Video is public and working
-- [ ] Zipped as `23127371.zip`
+- [ ] Zipped as `23127240.zip`
 
 **Google Drive Submission (Data):**
 - [ ] All papers in `YYMM-XXXXX` format folders
@@ -172,7 +172,7 @@ After running, you'll have:
 - [ ] Figures removed from TeX files
 - [ ] No image files present
 - [ ] `scraping_stats.json` included
-- [ ] Zipped as `23127371_data.zip`
+- [ ] Zipped as `23127240_data.zip`
 
 **Video Requirements:**
 - [ ] Duration ≤ 120 seconds
@@ -247,7 +247,7 @@ python main.py
 ```
 
 ### After Scraping:
-1. Check `23127371_data/scraping_stats.json`
+1. Check `23127240_data/scraping_stats.json`
 2. Fill statistics in `Report.doc`
 3. Record demo video
 4. Submit!
@@ -259,7 +259,7 @@ python main.py
 ### Commands:
 ```bash
 # Setup
-cd 23127371/src
+cd 23127240/src
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -271,7 +271,7 @@ python test_scraper.py
 python main.py
 
 # Check results
-cat ../23127371_data/scraping_stats.json
+cat ../23127240_data/scraping_stats.json
 
 # View logs
 tail -f logs/scraper.log
@@ -282,8 +282,8 @@ tail -f logs/scraper.log
 - None others needed!
 
 ### Files to Submit:
-- **Moodle:** `23127371.zip` (source code)
-- **Drive:** `23127371_data.zip` (scraped data)
+- **Moodle:** `23127240.zip` (source code)
+- **Drive:** `23127240_data.zip` (scraped data)
 
 ---
 
@@ -300,6 +300,6 @@ Everything is set up and ready to go. Just:
 ---
 
 *Last Updated: November 6, 2024*  
-*Student ID: 23127371*  
+*Student ID: 23127240*  
 *Course: Introduction to Data Science*
 

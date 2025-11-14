@@ -12,8 +12,8 @@ dist/
 build/
 
 # Data directories
-23127371_data/
-23127371_test_data/
+23127240_data/
+23127240_test_data/
 *.zip
 
 # Logs

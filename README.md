@@ -17,14 +17,14 @@ This repository contains the implementation for Lab 1 of the Introduction to Dat
 
 ### Option 1: Run on Google Colab (Recommended)
 
-1. Open the Colab notebook: [ArXiv_Scraper_Colab.ipynb](23127371/ArXiv_Scraper_Colab.ipynb)
-2. Or follow the detailed guide: [COLAB_SCRAPING_GUIDE.md](23127371/COLAB_SCRAPING_GUIDE.md)
+1. Open the Colab notebook: [ArXiv_Scraper_Colab.ipynb](23127240/ArXiv_Scraper_Colab.ipynb)
+2. Or follow the detailed guide: [COLAB_SCRAPING_GUIDE.md](23127240/COLAB_SCRAPING_GUIDE.md)
 
 ### Option 2: Run Locally
 
 ```bash
 git clone https://github.com/nhutphansayhi/ScrapingData.git
-cd ScrapingData/23127371/src
+cd ScrapingData/23127240/src
 pip install -r requirements.txt
 python main.py
 ```
@@ -32,7 +32,7 @@ python main.py
 ## 📁 Repository Structure
 
 ```
-23127371/
+23127240/
 ├── src/                          # Source code
 │   ├── main.py                   # Main scraper
 │   ├── arxiv_scraper.py          # arXiv API interaction
@@ -56,11 +56,11 @@ python main.py
 - ✅ Retry mechanism for API rate limits
 - ✅ Data validation and verification
 
-## 📝 Documentation
+## � Documentation
 
-- **[QUICKSTART.md](23127371/QUICKSTART.md)** - Get started in 5 minutes
-- **[COLAB_SCRAPING_GUIDE.md](23127371/COLAB_SCRAPING_GUIDE.md)** - Complete Colab guide
-- **[PROJECT_SUMMARY.md](23127371/PROJECT_SUMMARY.md)** - Technical details
+- **[QUICKSTART.md](23127240/QUICKSTART.md)** - Get started in 5 minutes
+- **[COLAB_SCRAPING_GUIDE.md](23127240/COLAB_SCRAPING_GUIDE.md)** - Complete Colab guide
+- **[PROJECT_SUMMARY.md](23127240/PROJECT_SUMMARY.md)** - Technical details
 
 ## 🎓 Course Information
 

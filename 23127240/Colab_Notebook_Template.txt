@@ -21,19 +21,19 @@ print("✓ Dependencies installed")
 
 # Option A: Upload from local machine
 from google.colab import files
-print("Please upload the 23127371.zip file containing your source code")
+print("Please upload the 23127240.zip file containing your source code")
 uploaded = files.upload()
 
 # Extract the uploaded zip
-!unzip -q 23127371.zip
-!ls -la 23127371/
+!unzip -q 23127240.zip
+!ls -la 23127240/
 
 print("✓ Source code uploaded and extracted")
 
 
 # Option B: Clone from GitHub (if you've uploaded to GitHub)
 # !git clone https://github.com/yourusername/arxiv-scraper.git
-# !mv arxiv-scraper 23127371
+# !mv arxiv-scraper 23127240
 
 
 # ============================================================================
@@ -41,15 +41,15 @@ print("✓ Source code uploaded and extracted")
 # ============================================================================
 
 # Check directory structure
-!tree 23127371/ -L 2 || find 23127371/ -maxdepth 2
+!tree 23127240/ -L 2 || find 23127240/ -maxdepth 2
 
 # Verify files exist
 import os
 required_files = [
-    '23127371/src/main.py',
-    '23127371/src/arxiv_scraper.py',
-    '23127371/src/reference_scraper.py',
-    '23127371/src/requirements.txt'
+    '23127240/src/main.py',
+    '23127240/src/arxiv_scraper.py',
+    '23127240/src/reference_scraper.py',
+    '23127240/src/requirements.txt'
 ]
 
 for f in required_files:
@@ -64,7 +64,7 @@ for f in required_files:
 # ============================================================================
 
 # Test with just 3 papers to verify everything works
-%cd /content/23127371/src
+%cd /content/23127240/src
 
 !python main.py --start-ym 2208 --start-id 11941 --end-ym 2208 --end-id 11943
 
@@ -76,12 +76,12 @@ for f in required_files:
 # View test statistics
 import json
 
-with open('../23127371_data/scraping_stats.json', 'r') as f:
+with open('../23127240_data/scraping_stats.json', 'r') as f:
     stats = json.load(f)
     print(json.dumps(stats, indent=2))
 
 # List scraped papers
-!ls -lh ../23127371_data/
+!ls -lh ../23127240_data/
 
 
 # ============================================================================
@@ -92,7 +92,7 @@ with open('../23127371_data/scraping_stats.json', 'r') as f:
 # Make sure Colab doesn't disconnect during execution
 # Consider using Colab Pro for longer runtime
 
-%cd /content/23127371/src
+%cd /content/23127240/src
 
 # Run with default settings (full assignment range: 2208.11941 to 2209.11937)
 !python main.py
@@ -118,7 +118,7 @@ import json
 import pandas as pd
 
 # Load statistics
-with open('../23127371_data/scraping_stats.json', 'r') as f:
+with open('../23127240_data/scraping_stats.json', 'r') as f:
     stats = json.load(f)
 
 print("="*80)
@@ -158,19 +158,19 @@ if pipeline_stats['paper_sizes_after']:
 
 # Look at a sample paper's structure
 !echo "=== Directory Structure ==="
-!tree ../23127371_data/2208-11941/ || find ../23127371_data/2208-11941/
+!tree ../23127240_data/2208-11941/ || find ../23127240_data/2208-11941/
 
 # View metadata
 !echo "\n=== Metadata ==="
-!cat ../23127371_data/2208-11941/metadata.json
+!cat ../23127240_data/2208-11941/metadata.json
 
 # View references
 !echo "\n=== References ==="
-!cat ../23127371_data/2208-11941/references.json
+!cat ../23127240_data/2208-11941/references.json
 
 # View BibTeX
 !echo "\n=== BibTeX ==="
-!cat ../23127371_data/2208-11941/references.bib
+!cat ../23127240_data/2208-11941/references.bib
 
 
 # ============================================================================
@@ -184,8 +184,8 @@ if pipeline_stats['paper_sizes_after']:
 !df -h
 
 # Check data directory size
-!du -sh ../23127371_data/
-!du -h ../23127371_data/ | sort -hr | head -20
+!du -sh ../23127240_data/
+!du -h ../23127240_data/ | sort -hr | head -20
 
 
 # ============================================================================
@@ -196,10 +196,10 @@ if pipeline_stats['paper_sizes_after']:
 %cd /content
 
 # Zip the data folder
-!zip -r 23127371_data.zip 23127371_data/
+!zip -r 23127240_data.zip 23127240_data/
 
 # Check zip size
-!ls -lh 23127371_data.zip
+!ls -lh 23127240_data.zip
 
 print("\n✓ Data packaged successfully")
 
@@ -211,7 +211,7 @@ print("\n✓ Data packaged successfully")
 # Download the zip file
 from google.colab import files
 
-files.download('23127371_data.zip')
+files.download('23127240_data.zip')
 
 print("✓ Download started - check your browser downloads")
 
@@ -223,19 +223,19 @@ print("✓ Download started - check your browser downloads")
 %cd /content
 
 # Copy only source files (no data)
-!mkdir -p 23127371_submission/src
-!cp 23127371/src/*.py 23127371_submission/src/
-!cp 23127371/src/requirements.txt 23127371_submission/src/
-!cp 23127371/README.md 23127371_submission/
-!cp 23127371/Report.doc 23127371_submission/
+!mkdir -p 23127240_submission/src
+!cp 23127240/src/*.py 23127240_submission/src/
+!cp 23127240/src/requirements.txt 23127240_submission/src/
+!cp 23127240/README.md 23127240_submission/
+!cp 23127240/Report.doc 23127240_submission/
 
 # Zip source code for Moodle submission
-!zip -r 23127371_source.zip 23127371_submission/
+!zip -r 23127240_source.zip 23127240_submission/
 
-!ls -lh 23127371_source.zip
+!ls -lh 23127240_source.zip
 
 # Download source code package
-files.download('23127371_source.zip')
+files.download('23127240_source.zip')
 
 print("✓ Source code package ready for Moodle submission")
 
@@ -247,7 +247,7 @@ print("✓ Source code package ready for Moodle submission")
 # Time a single paper scrape for benchmarking
 import time
 
-%cd /content/23127371/src
+%cd /content/23127240/src
 
 start = time.time()
 !python main.py --start-ym 2208 --start-id 11950 --end-ym 2208 --end-id 11950

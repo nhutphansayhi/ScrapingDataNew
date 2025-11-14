@@ -60,10 +60,11 @@ except:
 ### Cell 2: Clone Repository
 
 ```python
-# Clone source code từ GitHub
+# Clone source code từ GitHub của bạn
 !git clone https://github.com/nhutphansayhi/ScrapingData.git
-%cd ScrapingData/23127371
+%cd ScrapingData/23127240
 !ls -la
+!ls -la src/
 ```
 
 ---
@@ -194,7 +195,7 @@ import sys
 import os
 
 # Thêm src vào Python path
-sys.path.insert(0, '/content/ScrapingData/23127371/src')
+sys.path.insert(0, '/content/ScrapingData/23127240/src')
 
 # Import scraper modules
 from main import main as run_scraper

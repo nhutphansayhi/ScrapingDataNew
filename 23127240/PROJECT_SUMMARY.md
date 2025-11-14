@@ -4,7 +4,7 @@
 
 This is a **complete, ready-to-use** arXiv paper scraper system for your Data Science Milestone 1 assignment.
 
-**Student ID:** 23127371  
+**Student ID:** 23127240  
 **Assignment Range:** 2022-08/11941 to 2022-09/11937
 
 ---
@@ -12,7 +12,7 @@ This is a **complete, ready-to-use** arXiv paper scraper system for your Data Sc
 ## 📁 Project Structure
 
 ```
-23127371/
+23127240/
 ├── src/                          # Source code directory
 │   ├── main.py                   # Main scraper pipeline
 │   ├── arxiv_scraper.py          # arXiv download & processing
@@ -69,7 +69,7 @@ This is a **complete, ready-to-use** arXiv paper scraper system for your Data Sc
 ### **Option 1: Quick Test (Recommended First)**
 
 ```bash
-cd 23127371/src
+cd 23127240/src
 python -m venv venv
 venv\Scripts\activate          # Windows
 # source venv/bin/activate     # Linux/Mac
@@ -82,7 +82,7 @@ Choose option 1 to test with 3 papers (~2 minutes)
 ### **Option 2: Run Full Scraper**
 
 ```bash
-cd 23127371/src
+cd 23127240/src
 venv\Scripts\activate          # If not already activated
 python main.py
 ```
@@ -108,7 +108,7 @@ python main.py --start-ym 2208 --start-id 11941 --end-ym 2208 --end-id 11950
 
 ### **Directory Structure:**
 ```
-23127371_data/
+23127240_data/
 ├── 2208-11941/
 │   ├── tex/
 │   │   ├── v1/              # Version 1 TeX files
@@ -212,18 +212,18 @@ After scraping completes:
 ```bash
 # Make sure you're in the parent directory
 cd ..
-zip -r 23127371.zip 23127371/
+zip -r 23127240.zip 23127240/
 ```
 
-Upload `23127371.zip` to Moodle.
+Upload `23127240.zip` to Moodle.
 
 **For Google Drive (Data):**
 ```bash
 # Zip the data folder
-zip -r 23127371_data.zip 23127371_data/
+zip -r 23127240_data.zip 23127240_data/
 ```
 
-Upload `23127371_data.zip` to instructor's Google Drive.
+Upload `23127240_data.zip` to instructor's Google Drive.
 
 ---
 
@@ -360,7 +360,7 @@ pip install -r requirements.txt
 
 ### **Installation**
 ```bash
-cd 23127371/src
+cd 23127240/src
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -378,8 +378,8 @@ python main.py
 
 ### **Check Results**
 ```bash
-cat ../23127371_data/scraping_stats.json
-ls ../23127371_data/
+cat ../23127240_data/scraping_stats.json
+ls ../23127240_data/
 ```
 
 ### **View Logs**
@@ -398,7 +398,7 @@ tail -f logs/scraper.log
 - [ ] Report.doc completed with statistics
 - [ ] YouTube video link in Report.doc
 - [ ] Video is public and working
-- [ ] Zipped as 23127371.zip
+- [ ] Zipped as 23127240.zip
 
 **Data Submission (Google Drive):**
 - [ ] All papers in YYMM-XXXXX folders
@@ -406,7 +406,7 @@ tail -f logs/scraper.log
 - [ ] Figures removed from TeX files
 - [ ] No image files present
 - [ ] scraping_stats.json included
-- [ ] Zipped as 23127371_data.zip
+- [ ] Zipped as 23127240_data.zip
 
 ---
 
@@ -423,6 +423,6 @@ Everything is ready. Just:
 ---
 
 *Created: November 6, 2024*  
-*Student ID: 23127371*  
+*Student ID: 23127240*  
 *Course: Introduction to Data Science - Milestone 1*
 

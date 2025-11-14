@@ -6,7 +6,7 @@
 
 ```bash
 # Navigate to project directory
-cd 23127371/src
+cd 23127240/src
 
 # Create virtual environment
 python -m venv venv
@@ -38,7 +38,7 @@ python main.py --start-ym 2208 --start-id 11941 --end-ym 2208 --end-id 11943
 python main.py
 
 # This will scrape: 2208.11941 to 2209.11937
-# Output will be in: ../23127371_data/
+# Output will be in: ../23127240_data/
 # Logs will be in: ./logs/scraper.log
 ```
 
@@ -46,20 +46,20 @@ python main.py
 
 ```bash
 # View statistics
-cat ../23127371_data/scraping_stats.json
+cat ../23127240_data/scraping_stats.json
 
 # Check logs
 cat logs/scraper.log
 
 # List scraped papers
-ls ../23127371_data/
+ls ../23127240_data/
 ```
 
 ## For Google Colab
 
 ### 1. Upload Files
 
-Upload the entire `23127371` folder to your Google Drive or Colab session.
+Upload the entire `23127240` folder to your Google Drive or Colab session.
 
 ### 2. Run in Colab
 
@@ -68,7 +68,7 @@ Upload the entire `23127371` folder to your Google Drive or Colab session.
 !pip install arxiv==2.1.0 requests==2.31.0 pandas==2.0.3
 
 # Navigate to source directory
-%cd /content/23127371/src
+%cd /content/23127240/src
 
 # Test with small range first
 !python main.py --start-ym 2208 --start-id 11941 --end-ym 2208 --end-id 11943
@@ -81,17 +81,17 @@ Upload the entire `23127371` folder to your Google Drive or Colab session.
 
 ```python
 # Compress results
-!cd .. && zip -r 23127371_data.zip 23127371_data/
+!cd .. && zip -r 23127240_data.zip 23127240_data/
 
 # Download the zip file
 from google.colab import files
-files.download('../23127371_data.zip')
+files.download('../23127240_data.zip')
 ```
 
 ## Expected Output Structure
 
 ```
-23127371_data/
+23127240_data/
 ├── 2208-11941/
 │   ├── tex/
 │   │   ├── v1/
@@ -116,7 +116,7 @@ pip install -r requirements.txt
 ### "Permission denied"
 ```bash
 # Make sure you have write permissions in the output directory
-mkdir -p ../23127371_data
+mkdir -p ../23127240_data
 ```
 
 ### "Rate limit exceeded"

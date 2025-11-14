@@ -1,6 +1,6 @@
 """
 Test script for arXiv scraper - runs a small test on a few papers
-Student ID: 23127371
+Student ID: 23127240
 """
 
 import os
@@ -103,7 +103,7 @@ def main():
     print()
     print("="*80)
     print("arXiv Scraper - Testing Utility")
-    print("Student ID: 23127371")
+    print("Student ID: 23127240")
     print("="*80)
     print()
     print("Choose a test option:")

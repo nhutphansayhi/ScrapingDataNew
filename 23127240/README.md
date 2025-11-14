@@ -29,7 +29,7 @@ This project scrapes arXiv papers including full TeX sources, metadata, BibTeX r
 
 1. **Clone or extract the project**
    ```bash
-   cd 23127371
+   cd 23127240
    ```
 
 2. **Create a virtual environment (recommended)**
