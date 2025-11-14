@@ -1,2 +1,0 @@
-F: get files list
-E: check file exist
